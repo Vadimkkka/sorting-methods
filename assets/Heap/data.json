@@ -1,0 +1,22 @@
+{
+	"algorithm": "void heapify(List list, int n, int i) {\n\t\t\tint largest = i;\n\t\t\tint l = 2*i + 1;\n\t\t\tint r = 2*i + 2;\n\t\t\tif (l < n && list[l] > list[largest]) {\n\t\t\t\t\t\tlargest = l;\n\t\t\t}\n\t\t\tif (r < n && list[r] > list[largest]) {\n\t\t\t\t\t\tlargest = r;\n\t\t\t}\n\t\t\tif (largest != i) {\n\t\t\t\t\t\tswapList(list, i, largest);\n\t\t\t\t\t\theapify(list, n, largest);\n\t\t\t}\n}\n\nvoid swapList(List list, int i, int largest) {\n\t\t\tint swap = list[i];\n\t\t\tlist[i] = list[largest];\n\t\t\tlist[largest] = swap;}\n\nvoid heapSort(List list){\n\t\t\tint n = list.length;\n\t\t\tfor (int i = (n ~/ 2 ) ; i >= 0; i--){\n\t\t\t\t\t\theapify(list, n, i);\n\t\t\t}\n\t\t\tfor (int i = n-1; i>=0; i--) {\n\t\t\t\t\t\tswap(list, i);\n\t\t\t\t\t\theapify(list, i, 0);\n\t\t\t}\n}\n\nvoid swap(List list, int i) {\n\t\t\tint temp = list[0];\n\t\t\tlist[0] = list[i];\n\t\t\tlist[i] = temp;\n}",
+	"discussion": [
+		"Сортировка кучи проста в реализации, выполняет сортировку O(n * lg(n)), но не стабильна.",
+		"Первый цикл, фаза Θ(n) «heapify», помещает массив в порядок кучи. Второй цикл, фаза «sortdown» O (n * lg(n)), многократно извлекает максимум и восстанавливает порядок кучи.",
+		"Функция приемника написана рекурсивно для ясности. Таким образом, как показано, для кода требуется пространство Θ(lg(n)) для стека рекурсивных вызовов. Однако хвостовая рекурсия легко конвертируется в итерацию, что дает ограничение пространства O(1).",
+		"Обе фазы являются слегка адаптивными, хотя и не особенно полезными. В почти отсортированном случае фаза «heapify» уничтожает исходный порядок. В обратном случае фаза кучи является максимально быстрой, так как массив начинается в порядке кучи, но тогда фаза сортировки является типичной. В случае нескольких уникальных ключей наблюдается некоторое ускорение, но не такое значительное, как при сортировке оболочки или трехсторонней быстрой сортировке."
+	],
+	"properties": [
+		"Нестабильный",
+		"O(1) дополнительного пространства (см. Обсуждение)",
+		"O (n * lg(n)) время",
+		"Не очень адаптивный"
+	],
+	"efficiency": 4.5,
+	"animate_targets": {
+		"random": 81,
+		"nearly_sorted": 92,
+		"reversed": 73,
+		"few_unique": 74
+	}
+}

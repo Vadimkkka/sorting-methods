@@ -1,0 +1,19 @@
+{
+	"algorithm": "List<int> bubbleSort(List<int> list) {\n\t\t\tfor (int j = 1; j < list.length; j++) {\n\t\t\t\t\t\tint key = list[j];\n\t\t\t\t\t\tint i = j - 1;\n\t\t\t\t\t\twhile (i >= 0 && list[i] > key) {\n\t\t\t\t\t\t\t\t\tlist[i + 1] = list[i];\n\t\t\t\t\t\t\t\t\ti = i - 1;list[i + 1] = key;\n\t\t\t\t\t\t}\n\t\t\t}\n\t\t\treturn list;\n}",
+	"discussion": [
+		"Сортировка пузырём имеет многие из тех же свойств, что и сортировка вставкой, но имеет несколько большие накладные расходы. В случае почти отсортированных данных, пузырьковая сортировка занимает время O(n), но требует как минимум 2 прохода через данные (тогда как сортировка вставкой требует нечто более похожее на 1 проход)."
+	],
+	"properties": [
+		"Стабильный",
+		"O(1) дополнительного пространства",
+		"O(n2) сравнения и замены",
+		"Адаптивный: O(n) время, когда почти отсортировано"
+	],
+	"efficiency": 2.5,
+	"animate_targets": {
+		"random": 164,
+		"nearly_sorted": 37,
+		"reversed": 191,
+		"few_unique": 163
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"algorithm": "List<int> insertionSort(List<int> list) {\n\t\t\tfor (int j = 1; j < list.length; j++) {\n\t\t\t\t\t\tint key = list[j];\n\t\t\t\t\t\tint i = j - 1;\n\t\t\t\t\t\twhile (i >= 0 && list[i] > key) {\n\t\t\t\t\t\t\t\t\tlist[i + 1] = list[i];\n\t\t\t\t\t\t\t\t\ti = i - 1;list[i + 1] = key;\n\t\t\t\t\t\t}\n\t\t\t}\n\t\t\treturn list;\n}",
+	"discussion": [
+		"Although it is one of the elementary sorting algorithms with O(n2) worst-case time, insertion sort is the algorithm of choice either when the data is nearly sorted (because it is adaptive) or when the problem size is small (because it has low overhead).",
+		"For these reasons, and because it is also stable, insertion sort is often used as the recursive base case (when the problem size is small) for higher overhead divide-and-conquer sorting algorithms, such as merge sort or quick sort."
+	],
+	"properties": [
+		"Stable",
+		"O(1) extra space",
+		"O(n2) comparisons and swaps",
+		"Adaptive: O(n) time when nearly sorted",
+		"Very low overhead"
+	],
+	"efficiency": 2.5,
+	"animate_targets": {
+		"random": 91,
+		"nearly_sorted": 91,
+		"reversed": 88,
+		"few_unique": 53
+	}
+}
