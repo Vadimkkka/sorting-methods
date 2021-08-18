@@ -1,16 +1,19 @@
-# SortingMethods
+# 🪄 SortingMethods
 
-A new Flutter project.
+![Dart](https://img.shields.io/badge/-Dart-24292F?style=for-the-badge&logo=Dart&logoColor=0175C2)
+![Flutter](https://img.shields.io/badge/-Flutter-24292F?style=for-the-badge&logo=Flutter&logoColor=02569B)
+![Xcode](https://img.shields.io/badge/-Xcode-24292F?style=for-the-badge&logo=Xcode&logoColor=147EFB)
+![macOS](https://img.shields.io/badge/-macOS-24292F?style=for-the-badge&logo=Apple)
+![iOS](https://img.shields.io/badge/-iOS-24292F?style=for-the-badge&logo=Apple)
+![Android](https://img.shields.io/badge/-Android-24292F?style=for-the-badge&logo=Android&logoColor=3DDC84)
+![Windows](https://img.shields.io/badge/-Windows-24292F?style=for-the-badge&logo=Windows&logoColor=0078D6)
+![Web](https://img.shields.io/badge/-Web-24292F?style=for-the-badge&logo=GoogleChrome&logoColor=4285F4)
 
-## Getting Started
+Курсовой проект по методам сортировки. Необходимо создать приложение с информацией о методах сортировки.
 
-This project is a starting point for a Flutter application.
+<img src="./assets/Preview.gif" alt="Preview" style="padding: 20px;border-radius: 27px;"/>
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Run app
+```console
+$ flutter run
+```
